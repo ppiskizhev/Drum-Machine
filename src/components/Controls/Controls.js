@@ -19,8 +19,7 @@ const StyledControls = styled.div`
 `;
 
 const Checkbox = styled.input.attrs({
-  type: 'checkbox',
-  id: 'power'
+  type: 'checkbox'
 })`
   display: none;
 
@@ -123,7 +122,10 @@ export class Controls extends Component {
     return (
       <StyledControls>
         <div className="controls__power">
-          <Checkbox onChange={this.props.onPowerChange} /> 
+          <Checkbox 
+            id="power" 
+            onChange={this.props.onPowerChange} 
+          /> 
           <Label htmlFor="power">
             Power
             <ControlToggler></ControlToggler>
@@ -143,6 +145,7 @@ export class Controls extends Component {
         </ControlsVolume>
         <div className="controls__bank">
           <Checkbox 
+            id="bank"
             onChange={this.props.onBankChange} 
             checked={this.props.isBankChecked} 
             disabled={!this.props.isPowered} 
