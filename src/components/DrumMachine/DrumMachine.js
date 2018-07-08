@@ -22,7 +22,7 @@ const StyledDrumMachine = styled.div`
   align-items: center;
   width: 90%;
   height: 90vh;
-  padding: 20px;
+  padding: 0;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
